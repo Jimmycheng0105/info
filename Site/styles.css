@@ -1,0 +1,273 @@
+/* =========================
+   RESET
+========================= */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  gap: 28px;
+  padding: 24px;
+  align-items: start;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: var(--sidebar-w);
+  max-width: var(--sidebar-w);
+  position: sticky;
+  top: 20px;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 8px;
+  line-height: 1.1;
+  border-radius: 0;
+  width: fit-content;
+}
+
+.name {
+  background: black;
+  color: #fff;
+  font-weight: 700;
+}
+
+.research {
+  background: var(--c-research);
+  color: #fff;
+  font-weight: 700;
+}
+
+.teaching {
+  background: var(--c-teaching);
+  color: #fff;
+  font-weight: 700;
+}
+
+.soft {
+  background: var(--c-soft);
+}
+
+.nav-item {
+  font-size: 18px;
+  letter-spacing: 0.1px;
+}
+
+.nav-item.active {
+  color: var(--c-teaching);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content {
+  max-width: 1200px;
+}
+
+/* Split main content + media rail */
+.content-split {
+  display: grid;
+  grid-template-columns: minmax(0, 150ch) 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+/* Text column */
+.content-text {
+  max-width: 150ch;
+}
+
+/* =========================
+   TITLE + TEXT
+========================= */
+.title {
+  background: var(--c-title);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.lede {
+  color: var(--muted);
+  max-width: 150ch;
+}
+
+/* Highlight utility */
+.hl {
+  padding: 4px 6px;
+  border-radius: 3px;
+  background: var(--c-research);
+  color: #fff;
+}
+
+/* =========================
+   NEWS
+========================= */
+.news {
+  margin-top: 24px;
+  max-width: 150ch;
+}
+
+.news-title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px;
+}
+
+.news-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.news-list li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.news-date {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+/* =========================
+   MEDIA RAIL (GIF / VIDEO)
+========================= */
+.media-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 360px;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+  background: #f7f7f9;
+}
+
+/* =========================
+   ABOUT TEXT (JUSTIFIED)
+========================= */
+.about-text {
+  max-width: 65ch;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.about-text p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* =========================
+   GRID / COLUMNS (LEGACY)
+========================= */
+.cols {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+  margin: 18px 0;
+}
+
+.mini {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1000px) {
+  .content-split {
+    grid-template-columns: 1fr;
+  }
+
+  .media-rail {
+    margin-top: 24px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    width: auto;
+    max-width: none;
+  }
+
+  .cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-text {
+    text-align: left;
+    hyphens: none;
+  }
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --c-research: #0a43ff;
+  --c-teaching: #ff4a17;
+  --c-title: #ff4a17;
+  --c-soft: #ececf2;
+
+  --ink: #111;
+  --muted: #666;
+  --sidebar-w: 320px;
+}
