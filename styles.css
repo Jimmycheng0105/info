@@ -92,7 +92,7 @@ a:hover {
    CONTENT
 ========================= */
 .content {
-  max-width: none;
+  max-width: 1200px;
 }
 
 /* Split main content + media rail */
@@ -171,7 +171,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: none;
+  max-width: 1200px;
 }
 
 .media-item img,
@@ -268,6 +268,7 @@ a:hover {
   --muted: #666;
   --sidebar-w: 320px;
 }
+
 
 
 
