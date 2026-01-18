@@ -225,12 +225,6 @@ a:hover {
    RESPONSIVE
 ========================= */
 @media (max-width: 1000px) {
-.content-split {
-  display: grid;
-  grid-template-columns: minmax(0, 150ch) minmax(320px, 520px);
-  gap: 16px;
-}
-
 
   .media-rail {
     margin-top: 24px;
@@ -274,5 +268,6 @@ a:hover {
   --muted: #666;
   --sidebar-w: 320px;
 }
+
 
 
