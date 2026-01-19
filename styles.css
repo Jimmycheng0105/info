@@ -68,6 +68,11 @@ a:hover {
   color: #fff;
   font-weight: 700;
 }
+.email-underscore {
+  font-style: oblique;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 2px;
+}
 
 .teaching {
   background: var(--c-teaching);
@@ -259,11 +264,7 @@ a:hover {
     hyphens: none;
   }
 }
-.email-underscore {
-  font-style: oblique;
-  border-bottom: 2px solid currentColor;
-  padding-bottom: 2px;
-}
+
 
 /* =========================
    VARIABLES
@@ -278,6 +279,7 @@ a:hover {
   --muted: #666;
   --sidebar-w: 320px;
 }
+
 
 
 
