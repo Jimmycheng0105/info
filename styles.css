@@ -259,7 +259,11 @@ a:hover {
     hyphens: none;
   }
 }
-
+.email-underscore {
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 2px;
+}
 /* =========================
    VARIABLES
 ========================= */
@@ -273,3 +277,4 @@ a:hover {
   --muted: #666;
   --sidebar-w: 320px;
 }
+
